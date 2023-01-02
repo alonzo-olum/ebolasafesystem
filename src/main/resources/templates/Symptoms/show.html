@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>List A Symptom</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></link>
+</head>
+<body>
+
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">Symptom Detail</div>
+  <div class="panel-body">
+    <form class="form-horizontal" role="form" th:object="${symptoms}">
+    <table class="table table-striped" style="width:600px;">
+        <tr>
+            <th>Name</th>
+            <td><b th:text="${symptoms.symptom}">[name]</b></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td th:text="${symptoms.date_added}">[description]</td>
+        </tr>
+        
+         <tr>
+            <td> 
+            	<a th:href="@{/symptoms/form}" class="btn btn-success">Add New Symptom</a></td>
+            <td>
+            	<a th:href="@{'/symptoms/'+${symptoms.id}+'/form'}" class="btn btn-info">Edit</a>
+          	</td>
+        </tr>
+    </table>
+    </form>
+    </div>
+    </div>
+</div>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

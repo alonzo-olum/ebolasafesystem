@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="ol/css/bootstrap.min.css">
+	<link rel="stylesheet" href="ol/css/bootstrap-theme.min.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-cookies.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="ol/lib/bootstrap.min.js"></script>
+	<style type="text/css">body { padding-top: 90px; }</style>
+</head>
+<body ng-app="ebolasafe">
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">EbolaSafe</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Patients<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            	<li><a href="#/patients/list">All Patients</a></li>
+            	<li><a href="#/plants/create">Create Plant</a></li>
+            	<li><a href="#/plants/search">Search Availability</a></li>
+            	<li><a href="#/plants/search">Plants To Deliver Today</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PurchaseOrders<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            	<li><a href="#/pos">Rejected PO's</a></li>
+                <li><a href="#/pos">Approved PO's</a></li>
+                <li><a href="#/pos">Closed PO's</a></li>
+                <li><a href="#/pos">Invoiced PO's</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Customers<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#/customers">All Customers</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Invoices<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            	<li><a href="#/invoices">All Invoices</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Invoice filters</li>
+                
+                <li><a href="#/invoices">Rejected Invoices</a></li>
+                <li><a href="#/invoices">Approved Invoice</a></li>
+                <li><a href="#/invoices">Pending Invoices</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            	<li><a href="#/invoices">Settings</a></li>
+
+                <li class="divider"></li>
+                <li class="dropdown-header">User Settings</li>
+                <li><a href="#/invoices">New User</a></li>
+                <li><a href="#/invoices">All Users</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"> 
+            <form class="navbar-form navbar-right" method="post" ng-click="logout()">Rentit
+                    <i class="glyphicon glyphicon-user white"></i>
+                    <font style="color:#6961DF;font-size:12px;padding-right:5px;">{{user}}</font>
+					<a href="" ng-click="logout()">Log Out</a>
+                </form>
+                </li>
+          </ul>
+    </div>
+</div>
+</nav>
+	<div class="container">
+		<div ng-view=""></div>
+	</div>
+	<script src="ol/js/main.js"></script>
+	<script src="ol/js/controllers.js"></script>
+</body>
+</html>

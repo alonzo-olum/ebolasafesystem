@@ -1,0 +1,47 @@
+ <div class="panel panel-default">
+    <div class="panel-heading">View IllPatient</div>
+    <div class="panel-body" ng-controller="IllpatientController">
+    <div class="row">
+		
+		<label class="phone-label" >Phone Number:</label>
+		<input type="text" class="form_control" ng-model="phoneNumber">
+		<button class="btn btn-default" type="button" ng-click="searchpatient()">Search</button>
+		</div>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Patient Name</label>
+         		<label class="col-sm-2 control-label">{{illpatient.name}}</label>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="col-sm-2 control-label">Phone Number</label>
+         		<label class="col-sm-2 control-label">{{illpatient.phone}}</label>
+            </div>
+            <div class="form-group">
+                <label for="country" class="col-sm-2 control-label">Country</label>
+         		<label class="col-sm-2 control-label">{{illpatient.country}}</label>
+            </div>
+            <div class="form-group">
+                <label for="town" class="col-sm-2 control-label">Town</label>
+                <label class="col-sm-2 control-label">{{illpatient.town}}</label>
+                
+            </div>
+            <div class="form-group">
+                <label for="contact" class="col-sm-2 control-label">Contact Mode</label>
+                <label class="col-sm-2 control-label">{{illpatient.contact_mode}}</label>
+                
+            </div>
+            <div class="form-group">
+                <label for="date" class="col-sm-2 control-label">Registration Day</label>
+                <label class="col-sm-2 control-label">{{illpatient.registration_day}}</label>
+                
+            </div>
+            <div class="form-group">
+                <label for="status" class="col-sm-2 control-label">Status</label>
+                <label class="col-sm-2 control-label">{{illpatient.status}}</label>
+                
+            </div>
+            
+        </form>
+        <p/>
+    </div>

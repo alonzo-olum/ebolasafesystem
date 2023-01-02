@@ -1,0 +1,36 @@
+
+  <div class="panel-heading">New Patients</div>
+  <div class="panel-body" ng-controller="CreatePatientController">
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Patient Name</label>
+        <input type="text" ng-model="userName"></input>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Name</label>
+        <input type="text" ng-model="name"></input>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Phone</label>
+        <input type="text" ng-model="phoneNumber"></input>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Password</label>
+        <input type="text" ng-model="password"></input>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Email</label>
+        <input type="text" ng-model="email"></input>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Country</label>
+        <input type="text" ng-model="country"></input>
+      </div>
+     <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Town</label>
+        <input type="text" ng-model="town"></input>
+      </div>
+      <button class="btn btn-success" ng-click="setPatient()" type="submit">Save</button>
+    </form>
+  </div>

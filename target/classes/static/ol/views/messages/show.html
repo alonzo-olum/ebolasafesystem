@@ -1,0 +1,39 @@
+  <div class="panel panel-default">
+    <div class="panel-heading">View PurchaseOrder</div>
+    <div class="panel-body">
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Plant Name</label>
+         		 <label>{{pos.plant.name}}</label>
+            </div>
+            <div class="form-group">
+                <label for="description" class="col-sm-2 control-label">Plant Description</label>
+         		 <label>{{pos.plant.description}}</label>
+            </div>
+            <div class="form-group">
+                <label for="customer" class="col-sm-2 control-label">Customer</label>
+         		 <label>{{pos.customer.name}}</label>
+            </div>
+            <div class="form-group">
+                <label for="startDate" class="col-sm-2 control-label">Start date</label>
+                <label><td>{{pos.startDate}}</td></label>
+                
+            </div>
+            <div class="form-group">
+                <label for="enddate" class="col-sm-2 control-label">End Date</label>
+                <label><td>{{pos.endDate}}</td></label>
+                
+            </div>
+            <div class="form-group">
+                <label for="cost" class="col-sm-2 control-label">Cost</label>
+                <label><td>{{pos.cost}}</td></label>
+                
+            </div>
+            <button id="SubmitButtonID" class="btn btn-default">
+                <a href="#/invoices">Invoices</a>
+            </button>
+        </form>
+        <p/>
+    </div>
+</div>

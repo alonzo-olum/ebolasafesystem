@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+	<div class="panel-heading">LIST OF SYMPTOMS</div>
+	<div class="panel-body">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					
+					<th>Symptoms</th>
+					<th>DateAdded</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="sympatient in symptoms">
+					
+					<td>{{sympatient.symptom}}</td>
+					<td>{{sympatient.date_added}}</td>
+					
+				</tr>
+			</tbody>
+		</table>
+		<a type="button" class="btn btn-default" href="#/symptoms/create">
+		Add a Symptom
+	</a>
+	</div>
+</div>

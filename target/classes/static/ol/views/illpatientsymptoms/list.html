@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+	<div class="panel-heading">List of IllPatients with Symptoms</div>
+	<div class="panel-body">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>PhoneNumber</th>
+					<th>Symptoms</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="illpatient in illpatientsymptoms">
+					
+					<td>{{illpatient.phone}}</td>
+					<td>{{illpatient.symptom}}</td>
+										
+				</tr>
+			</tbody>
+		</table>
+		<a type="button" class="btn btn-default" href="#/illpatientsymptoms/create">
+		Add a Symptom and Patient.
+	</a>
+	</div>
+</div>
